@@ -1,22 +1,17 @@
-name: ESLint Check
+name: Lint
 
 on: [push, pull_request]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: weather-app  # 👈 tell it where to look
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 16
 
       - name: Install dependencies
         run: npm install
