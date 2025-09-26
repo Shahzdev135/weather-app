@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function getWeather() {
     const apiKey = "d50f91c4ae101a83074375e197121be3"; // Replace later with GitHub Secret
-    const city = "London";
+    const city = "Faisalabad,PK";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {
