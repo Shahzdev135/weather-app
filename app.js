@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(message);
 
   async function getWeather() {
-    const apiKey = "YOUR_API_KEY"; // Replace later with GitHub Secret
+    const apiKey = "d50f91c4ae101a83074375e197121be3"; // Replace later with GitHub Secret
     const city = "London";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
