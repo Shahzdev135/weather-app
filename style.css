@@ -17,6 +17,8 @@ p {
 #weather-container {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center; /* centers cards when they fit */
+  align-items: stretch;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 20px;
@@ -29,21 +31,22 @@ p {
   max-width: 100%;
 }
 
+/* Scrollbar styling */
 #weather-container::-webkit-scrollbar {
   height: 8px;
 }
-
 #weather-container::-webkit-scrollbar-thumb {
   background: #0077cc;
   border-radius: 10px;
 }
 
+/* Weather cards */
 .weather-card {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
-  min-width: 280px; /* prevents cards from shrinking too small */
-  flex: 0 0 auto; /* keep each card fixed width */
+  min-width: 280px;
+  flex: 0 0 auto;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -58,6 +61,14 @@ p {
   color: #0077cc;
   margin-bottom: 8px;
 }
+
+/* RESPONSIVE FIX: enable scroll + remove centering when screen is too small */
+@media (max-width: 650px) {
+  #weather-container {
+    justify-content: flex-start;
+  }
+}
+
 
 
 
