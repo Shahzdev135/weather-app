@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const message = document.createElement("p");
-  message.textContent = "Hello from JavaScript!";
+  message.textContent = "API: OpenWeatherMap";
   document.body.appendChild(message);
 
   async function getWeather() {
