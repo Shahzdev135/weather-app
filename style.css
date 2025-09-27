@@ -13,22 +13,38 @@ h1 {
 p {
   font-size: 18px;
 }
+
+/* Weather container */
 #weather-container {
   background-color: #e0f7fa;
   border-radius: 10px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 300px;
+  max-width: 350px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-#weather-container h2 {
-  color: #fff242;
+/* Each city’s card */
+#faisalabad, #toronto {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-#weather {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
+#faisalabad h2, #toronto h2 {
+  color: #00cc4e;
+  margin-bottom: 8px;
 }
 
+#weather-container p {
+  margin: 5px 0;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+}
