@@ -14,52 +14,42 @@ p {
   font-size: 18px;
 }
 
-/* Weather container */
 #weather-container {
   background-color: #e0f7fa;
   border-radius: 10px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 700px;
+  width: 95%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 15px;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: nowrap; /* force side-by-side */
+  overflow-x: auto;  /* allow horizontal scroll on small screens */
 }
 
-/* Each city card */
 #faisalabad, #toronto {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
-  flex: 1 1 250px; /* flex-grow, flex-shrink, flex-basis */
-  max-width: 300px; /* prevents cards from stretching too wide */
+  width: 45%;
+  min-width: 260px; /* ensures readable content */
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Add slight hover effect */
 #faisalabad:hover, #toronto:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-#faisalabad h2, #toronto h2 {
+h2 {
   color: #0077cc;
   margin-bottom: 8px;
 }
 
-#weather-container p {
-  margin: 5px 0;
-}
-
-img {
-  width: 80px;
-  height: 80px;
-}
 
 
