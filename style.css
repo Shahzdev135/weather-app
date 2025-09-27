@@ -14,24 +14,30 @@ p {
   font-size: 18px;
 }
 
+/* OUTER CONTAINER: handles scroll */
 #weather-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center; /* centers cards when they fit */
-  align-items: stretch;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 20px;
-  padding: 20px;
   background-color: #e0f7fa;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   margin: 20px auto;
   width: 95%;
-  max-width: 100%;
+  padding: 20px;
 }
 
-/* Scrollbar styling */
+/* INNER FLEXBOX: handles alignment */
+#weather-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* centers cards */
+  align-items: stretch;
+  gap: 20px;
+  min-width: max-content; /* ensures flex width = content width */
+  margin: 0 auto;
+}
+
+/* Scrollbar style */
 #weather-container::-webkit-scrollbar {
   height: 8px;
 }
@@ -45,7 +51,7 @@ p {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
-  min-width: 280px;
+  width: 280px;
   flex: 0 0 auto;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   text-align: center;
@@ -62,12 +68,13 @@ p {
   margin-bottom: 8px;
 }
 
-/* RESPONSIVE FIX: enable scroll + remove centering when screen is too small */
+/* Responsive scroll behavior */
 @media (max-width: 650px) {
-  #weather-container {
+  #weather-inner {
     justify-content: flex-start;
   }
 }
+
 
 
 
