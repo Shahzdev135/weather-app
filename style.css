@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #FFE0BD;
   color: #333;
   text-align: center;
   padding: 20px;
@@ -23,7 +23,7 @@ p {
 }
 
 #weather-container h2 {
-  color: #0077cc;
+  color: #fff242;
 }
 
 #weather {
@@ -31,3 +31,4 @@ p {
   font-weight: bold;
   margin-top: 10px;
 }
+
