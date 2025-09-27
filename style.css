@@ -14,66 +14,43 @@ p {
   font-size: 18px;
 }
 
-/* OUTER CONTAINER: handles scroll */
 #weather-container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
   background-color: #e0f7fa;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 20px;
   margin: 20px auto;
   width: 95%;
-  padding: 20px;
-}
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 
-/* INNER FLEXBOX: handles alignment */
-#weather-inner {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center; /* centers cards */
+  justify-content: center;
   align-items: stretch;
   gap: 20px;
-  min-width: max-content; /* ensures flex width = content width */
-  margin: 0 auto;
+  flex-wrap: nowrap; /* force side-by-side */
+  overflow-x: auto;  /* allow horizontal scroll on small screens */
 }
 
-/* Scrollbar style */
-#weather-container::-webkit-scrollbar {
-  height: 8px;
-}
-#weather-container::-webkit-scrollbar-thumb {
-  background: #0077cc;
-  border-radius: 10px;
-}
-
-/* Weather cards */
-.weather-card {
+#faisalabad, #toronto {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
-  width: 280px;
-  flex: 0 0 auto;
+  width: 45%;
+  min-width: 260px; /* ensures readable content */
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.weather-card:hover {
+#faisalabad:hover, #toronto:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.weather-card h2 {
+h2 {
   color: #0077cc;
   margin-bottom: 8px;
 }
 
-/* Responsive scroll behavior */
-@media (max-width: 650px) {
-  #weather-inner {
-    justify-content: flex-start;
-  }
-}
 
 
 
